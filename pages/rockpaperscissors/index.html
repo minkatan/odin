@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <div class="flex flex-col items-center justify-center relative">
+        <h1 class="text-5xl uppercase text-cyan-200 bg-cyan-700 py-4 w-full text-center">This is Rock, Paper, Scissors</h1>
+        <div class="py-4 flex flex-col items-center">
+            <h2 class="py-2 font-bold font-mono text-4xl">Computer Choice</h2>
+            <img id="computer-image" src="./assets/images/computer.png" alt="computer-choice">
+        </div>
+        <div id="score" class="border-2 p-2 rounded uppercase font-semibold text-xl bg-gradient-to-r from-cyan-600 to-teal-500 shadow-xl shadow-cyan-700">
+            Computer : 0 <span class="px-2">VS</span> Player : 0
+        </div>
+        <p id="score-msg" class="pt-4 uppercase font-semibold text-xl">
+            Ready! Score 5 to Win
+        </p>
+        <h2 class="py-8 font-bold font-mono text-4xl">Choose Your Tool</h2>
+        <div id="player" class="flex flex-row gap-x-8 relative">
+            <button class="hover:scale-110">
+                <img src="./assets/images/paper.png" alt="paper" />
+            </button>
+            <button class="hover:scale-110">
+                <img src="./assets/images/rock.png" alt="rock" />
+            </button>
+            <button class="hover:scale-110">
+                <img src="./assets/images/scissors.png" alt="scissor" />
+            </button>
+            <div id="start" class="flex items-center justify-center absolute inset-0 bg-gray-100 text-gray-800 text-4xl text-center font-bold rounded-2xl cursor-pointer">Start The Game</div>
+            <div id="end" class="flex items-center justify-center absolute inset-0 bg-red-100 text-red-800 text-4xl text-center font-bold rounded-2xl cursor-pointer hidden">You Won!</div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

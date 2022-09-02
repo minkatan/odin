@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Etch-A-Sketch</title>
+    
+</head>
+<body>
+    <div class="h-screen flex flex-col items-center pt-12">
+        <div id="root" class="w-96 h-96 flex flex-wrap border-4 border-cyan-700 bg-cyan-50 cursor-wand"></div>
+        <div class="relative flex flex-col items-center gap-y-4 py-4 mt-16 bg-indigo-800 text-red-100 w-96 rounded-2xl font-bold">
+            <div class="flex flex-row justify-between gap-x-4">
+                <button id="reset" class="bg-red-800 px-4 py-2 rounded">Reset</button>
+                <button id="random" class="bg-red-800 px-4 py-2 rounded">Random</button>
+                <button id="color" class="px-4 py-2 rounded"></button>
+                <button id="mono" class="bg-red-800 px-4 py-2 rounded">Monochrome</button>
+            </div>
+            <div class="text-center flex gap-x-4 items-center">
+                <label for="size" class="">Size</label>
+                <input id="input" type="number" value="16" max="100" class="p-2 text-indigo-900 text-center" />
+            </div>
+        </div>
+        <div class="text-xs pt-12">
+            <p><span class="font-bold">Reset</span> - reset grid</p>
+            <p><span class="font-bold">Random</span> - random colors</p>
+            <p><span class="font-bold">Monochrome</span> - switch between black and white</p>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

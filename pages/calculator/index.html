@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <main class="h-screen flex flex-col items-center justify-center bg-gray-900">
+        <h1 class="text-white py-12 text-8xl font-semibold">cAlCuLaTor</h1>
+    <div class="w-[400px] h-[540px] bg-gradient-to-r from-green-700 via-amber-400 to-red-200 flex items-center justify-center rounded-2xl">
+    <div class="w-80 h-[480px] text-gray-700 grid grid-flow-row rounded-2xl">
+        <div class="bg-gray-700 text-gray-50 w-full h-full text-xl text-right rounded-2xl py-2 px-4">0</div>
+        <div id="screen" class="rounded-2xl bg-gray-50 w-full h-full text-3xl text-right py-2 px-4">0</div>
+        <div class="grid grid-cols-4 pt-4 gap-2">
+            <button id="clear" class="rounded-2xl bg-red-100 col-span-2 active:bg-red-300">clear</button>
+            <button class="rounded-2xl bg-yellow-400 col-span-1 active:bg-yellow-200">←</button>
+            <button class="rounded-2xl bg-yellow-400 col-span-1 active:bg-yellow-200">÷</button>
+        </div>
+        <div class="grid grid-cols-4 gap-4 pt-2">
+            <button class="bg-stone-100 active:bg-stone-400 rounded-full">7</button>
+            <button class="bg-stone-100 active:bg-stone-400 rounded-full">8</button>
+            <button class="bg-stone-100 active:bg-stone-400 rounded-full">9</button>
+            <button class="bg-yellow-400 active:bg-yellow-200 rounded-full">×</button>
+        </div>    
+        <div class="grid grid-cols-4 gap-4 pt-2">
+            <button class="bg-stone-100 active:bg-stone-400 rounded-full">4</button>
+            <button class="bg-stone-100 active:bg-stone-400 rounded-full">5</button>
+            <button class="bg-stone-100 active:bg-stone-400 rounded-full">6</button>
+            <button class="bg-yellow-400 active:bg-yellow-200 rounded-full">-</button>
+        </div>    
+        <div class="grid grid-cols-4 gap-4 pt-2">
+            <button class="bg-stone-100 active:bg-stone-400 rounded-full">1</button>
+            <button class="bg-stone-100 active:bg-stone-400 rounded-full">2</button>
+            <button class="bg-stone-100 active:bg-stone-400 rounded-full">3</button>
+            <button class="bg-yellow-400 active:bg-yellow-200 rounded-full">+</button>
+        </div>    
+        <div class="grid grid-cols-4 gap-4 pt-2">
+            <button class="bg-stone-100 active:bg-stone-400 rounded-full col-span-2">0</button>
+            <button class="bg-stone-100 active:bg-stone-400 rounded-full">.</button>
+            <button class="bg-yellow-400 active:bg-yellow-200 rounded-full">=</button>
+        </div>    
+
+        
+    </div>
+    </div>
+    </main>
+    <script src="./app.js"></script>
+</body>
+</html>

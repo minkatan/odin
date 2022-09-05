@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.group1 + div {
+    /* Our cool CSS */
+    @apply bg-green-600
+  }

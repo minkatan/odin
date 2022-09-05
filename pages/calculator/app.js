@@ -50,26 +50,26 @@
 
 // clickButton();
 
-// function inputOperand(operand) {
-//     if(firstOperator === null) {
-//         if(displayValue === '0' || displayValue === 0) {
-//             //1st click - handles first operand input
-//             displayValue = operand;
-//         } else if(displayValue === firstOperand) {
-//             //starts new operation after inputEquals()
-//             displayValue = operand;
-//         } else {
-//             displayValue += operand;
-//         }
-//     } else {
-//         //3rd/5th click - inputs to secondOperand
-//         if(displayValue === firstOperand) {
-//             displayValue = operand;
-//         } else {
-//             displayValue += operand;
-//         }
-//     }
-// }
+function inputOperand(operand) {
+    if(firstOperator === null) {
+        if(displayValue === '0' || displayValue === 0) {
+            //1st click - handles first operand input
+            displayValue = operand;
+        } else if(displayValue === firstOperand) {
+            //starts new operation after inputEquals()
+            displayValue = operand;
+        } else {
+            displayValue += operand;
+        }
+    } else {
+        //3rd/5th click - inputs to secondOperand
+        if(displayValue === firstOperand) {
+            displayValue = operand;
+        } else {
+            displayValue += operand;
+        }
+    }
+}
 
 // function inputOperator(operator) {
 //     if(firstOperator != null && secondOperator === null) {

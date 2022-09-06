@@ -1,6 +1,6 @@
-/*
-! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
-*/
+/* https://tailwindcss.com/docs/functions-and-directives */
+
+/* ! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -558,16 +558,18 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.h-12 {
-  height: 3rem;
+root {
+  --header: 5rem;
+  --footer: 60px;
+  --main: calc(80vh - cal(var(--header) + var(var(--footer))));
 }
 
-.w-12 {
-  width: 3rem;
+body {
+  display: grid;
+  height: 50%;
+  place-items: center;
 }
 
-.group1 + div {
-  /* Our cool CSS */
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 163 74 / var(--tw-bg-opacity))
+h1{
+  font-size: clamp(0.5rem, 2vw, 1.5rem);
 }

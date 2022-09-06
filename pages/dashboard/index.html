@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Admin Dashboard</title>
+  </head>
+  <body class="grid grid-cols-8 grid-rows-6 h-full min-h-screen">
+
+      <!-- sidebar -->
+    <div
+      class="w-full bg-gradient-to-r from-slate-800 to-stone-200 col-span-2 row-span-full grid grid-rows-6 text-white px-4"
+    >
+      <a
+        href="./"
+        class="flex flex-row w-full gap-x-4 items-center text-2xl font-bold"
+      >
+        <img src="./avatar/odin-lined.png" alt="logo" class="w-16 h-16" />
+        <span>Odin Dashboard</span>
+      </a>
+      <div class="grid row-start-2 row-span-2 gap-y-4 py-8 px-4">
+        <a
+          href="./"
+          class="flex flex-row w-full gap-x-4 items-center hover:bg-slate-400 px-4 py-2 rounded-full"
+        >
+          <span class="material-icons">account_circle</span>User
+        </a>
+        <a
+          href="./"
+          class="flex flex-row w-full gap-x-4 items-center hover:bg-slate-400 px-4 py-2 rounded-full"
+        >
+          <span class="material-icons">email</span>Messages
+        </a>
+        <a
+          href="./"
+          class="flex flex-row w-full gap-x-4 items-center hover:bg-slate-400 px-4 py-2 rounded-full"
+        >
+          <span class="material-icons">history</span>History
+        </a>
+        <a
+          href="./"
+          class="flex flex-row w-full gap-x-4 items-center hover:bg-slate-400 px-4 py-2 rounded-full"
+        >
+          <span class="material-icons">task</span>Tasks
+        </a>
+        <a
+          href="./"
+          class="flex flex-row w-full gap-x-4 items-center hover:bg-slate-400 px-4 py-2 rounded-full"
+        >
+          <span class="material-icons">history</span>History
+        </a>
+        <a
+          href="./"
+          class="flex flex-row w-full gap-x-4 items-center hover:bg-slate-400 px-4 py-2 rounded-full"
+        >
+          <span class="material-icons">groups</span>Communities
+        </a>
+      </div>
+      <!-- Setting, Help, Privacy -->
+      <div class="row-start-5 row-span-1 grid py-8 px-4">
+        <a
+          href="./"
+          class="flex flex-row w-full gap-x-4 items-center hover:bg-slate-400 px-4 py-2 rounded-full"
+        >
+          <span class="material-icons">settings</span>Settings
+        </a>
+        <a
+          href="./"
+          class="flex flex-row w-full gap-x-4 items-center hover:bg-slate-400 px-4 py-2 rounded-full"
+        >
+          <span class="material-icons">help</span>Help
+        </a>
+        <a
+          href="./"
+          class="flex flex-row w-full gap-x-4 items-center hover:bg-slate-400 px-4 py-2 rounded-full"
+        >
+          <span class="material-icons">security</span>Privacy
+        </a>
+      </div>
+    </div>
+
+    <!-- user header -->
+    <div
+      class="w-full bg-stone-100 col-span-6 py-4 shadow-2xl shadow-slate-700 row-span-1"
+    >
+      <div class="w-full flex justify-between px-8 py-4 items-center gap-x-4">
+        <div class="flex flex-row gap-x-6 items-center">
+          <img
+            src="./avatar/ironman.jpeg"
+            alt="avatar"
+            class="rounded-full w-auto h-24"
+          />
+          <p class="text-xs">
+            Hey there👋!<span class="block text-2xl font-semibold"
+              >Ironman (@irontheman)</span
+            >
+          </p>
+        </div>
+        <div class="flex items-center gap-x-4">
+          <input type="text" class="bg-gray-300 py-2 px-4 rounded-2xl" />
+          <span class="material-icons">search</span>
+        </div>
+      </div>
+      <div class="pt-2 px-4 items-end flex gap-x-6">
+        <button
+          class="bg-slate-600 text-white px-4 py-2 rounded-3xl cursor-pointer hover:bg-slate-900"
+        >
+          Add New Project
+        </button>
+        <button
+          class="bg-slate-600 text-white px-4 py-2 rounded-3xl cursor-pointer hover:bg-slate-900"
+        >
+          Existing Projects
+        </button>
+        <button
+          class="bg-slate-600 text-white px-4 py-2 rounded-3xl cursor-pointer hover:bg-slate-900"
+        >
+          Share Projects
+        </button>
+      </div>
+    </div>
+
+    <!-- my projects -->
+    <div class="bg-stone-100 col-span-4 row-span-5 pb-8 px-4 h-full">
+      <h2
+        class="text-3xl font-bold tracking-tight text-gray-900 border-b-2 border-slate-400 pb-4"
+      >
+        My Projects
+      </h2>
+      <div
+        class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 md:grid-cols-2 xl:gap-x-8"
+      >
+
+      <!-- project 1 -->
+        <div class="group relative">
+          <div
+            class="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80"
+          >
+            <img
+              src="./images/Calculator.png"
+              alt="calculator"
+              class="h-full w-full object-cover object-center lg:h-full lg:w-full"
+            />
+          </div>
+          <div class="mt-4 flex justify-center">
+            <div>
+              <h3 class="text-2xl text-center text-gray-700">
+                <a href="https://minkatan.github.io/odin/pages/calculator/">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Calculator
+                </a>
+              </h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- project 2 -->
+        <div class="group relative">
+          <div
+            class="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80"
+          >
+            <img
+              src="./images/Form.png"
+              alt="calculator"
+              class="h-full w-full object-cover object-center lg:h-full lg:w-full"
+            />
+          </div>
+          <div class="mt-4 flex justify-center">
+            <div>
+              <h3 class="text-2xl text-center text-gray-700">
+                <a href="https://minkatan.github.io/odin/pages/sign-in-form/">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Form
+                </a>
+              </h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- project 3 -->
+        <div class="group relative">
+          <div
+            class="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80"
+          >
+            <img
+              src="./images/RockPaperScissors.png"
+              alt="calculator"
+              class="h-full w-full object-cover object-center lg:h-full lg:w-full"
+            />
+          </div>
+          <div class="mt-4 flex justify-center">
+            <div>
+              <h3 class="text-2xl text-center text-gray-700">
+                <a
+                  href="https://minkatan.github.io/odin/pages/rockpaperscissors/"
+                >
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Rock Paper Scissors
+                </a>
+              </h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- project 4 -->
+        <div class="group relative">
+          <div
+            class="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80"
+          >
+            <img
+              src="./images/Sketch.png"
+              alt="calculator"
+              class="h-full w-full object-cover object-center lg:h-full lg:w-full"
+            />
+          </div>
+          <div class="mt-4 flex justify-center">
+            <div>
+              <h3 class="text-2xl text-center text-gray-700">
+                <a href="https://minkatan.github.io/odin/pages/Etch-A-Sketch/">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Etch-a-Sketch
+                </a>
+              </h3>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    <!-- my projects -->
+    </div>
+    
+
+
+    <!-- comment seciont -->
+    <div class="bg-stone-100 col-span-2 row-span-5 pb-8 pt-24 px-4 h-full">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900">Comments</h2>
+      <p class="pb-4 text-sm text-gray-400">
+        Feel free to add comments below
+      </p>
+      <!-- comment 1 -->
+      <div class="py-4 mb-12 bg-slate-300 px-2 rounded-xl">
+        <div>
+          <div class="text-sm flex flex-row items-center gap-x-4">
+            <img src="./avatar/hulk.jpeg" alt="avatar" class="h-16 w-auto">
+            <a href="#" class="font-semibold text-slate-800">Eduardo Benz</a>
+          </div>
+          <p class="mt-1 text-xs text-gray-500">Commented 13 hours ago</p>
+        </div>
+        <div class="mt-2 text-sm text-gray-700">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt
+            nunc ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et
+            diam cursus quis sed purus nam.
+          </p>
+        </div>
+      </div>
+
+      <!-- comment 2 -->
+      <div class="py-4 mb-12 bg-slate-300 px-2 rounded-xl">
+        <div>
+          <div class="text-sm flex flex-row items-center gap-x-4">
+            <img src="./avatar/segar.jpeg" alt="avatar" class="h-16 w-auto">
+            <a href="#" class="font-semibold text-slate-800">Segar</a>
+          </div>
+          <p class="mt-1 text-xs text-gray-500">Commented 1d ago</p>
+        </div>
+        <div class="mt-2 text-sm text-gray-700">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt
+            nunc ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et
+            diam cursus quis sed purus nam.
+          </p>
+        </div>
+      </div>
+
+      <!-- comment 3 -->
+      <div class="py-4 mb-12 bg-slate-300 px-2 rounded-xl">
+        <div>
+          <div class="text-sm flex flex-row items-center gap-x-4">
+            <img src="./avatar/tnmt.jpeg" alt="avatar" class="h-16 w-auto">
+            <a href="#" class="font-semibold text-slate-800">Turtle</a>
+          </div>
+          <p class="mt-1 text-xs text-gray-500">Commented 1d ago</p>
+        </div>
+        <div class="mt-2 text-sm text-gray-700">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt
+            nunc ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et
+            diam cursus quis sed purus nam.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- after comments -->
+  </body>
+</html>

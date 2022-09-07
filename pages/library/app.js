@@ -44,20 +44,27 @@ savedButton.addEventListener('click', addBookToLibrary)
 addBookButton.addEventListener('click',toggleModal)
 
 function render(){
-    // main.innerHTML = ''
+    const btn = 
+
+    main.innerHTML = ''
     myLibrary.forEach((book) => {
         main.innerHTML += `
         <div class="bg-rose-100 border-red-900 border rounded-2xl col-span-1 px-4 py-8 relative">
         <span class="material-icons absolute top-4 right-2 cursor-pointer delete">close</span>
         <p class="text-xl font-semibold">${book.title} by <span>${book.author}</span></p>
         <p class="py-4">${book.pages} of pages</p>
-        <p class="flex items-center gap-x-2">Read: ${book.read ? '<span class="material-icons text-emerald-700">check_circle</span></p>' : '<span class="material-icons text-red-700">highlight_off</span></p>' } 
+        ${book.read ? '<button id="read-status" class="flex items-center gap-x-2 text-emerald-700 border border-emerald-900 bg-green-300 py-2 px-4 rounded-full">Read<span class="material-icons">check_circle</span></button>' : 
+        '<button id="read-status" class="flex items-center gap-x-2 text-red-700 border border-red-900 bg-rose-300 py-2 px-4 rounded-full">Read<span class="material-icons">highlight_off</span></button>'
+    } 
     </div>`
 
     const deleteBtns = document.querySelectorAll('.delete')
 
     deleteBtns.forEach((btn) => btn.addEventListener('click',deleteBook))
     })
+
+    const readStatus = document.getElementById('read-status')
+    readStatus.addEventListener('click', toggleRead)
 }
 
 function toggleModal(){
@@ -65,16 +72,16 @@ function toggleModal(){
 }
 
 function toggleRead(){
-    const readIcons = document.querySelector('.material-icons')
+    let text = this.children[0].innerText
 
-    if(readIcons.innerText === 'check_circle'){
-        readIcons.innerText = 'highlight_off'
-        readIcons.classList.remove('text-emerald-700')
-        readIcons.classList.add('text-red-700')
-    }else if(readIcons.innerText === 'highlight_off'){
-        readIcons.innerText = 'check_circle'
-        readIcons.classList.remove('text-red-700')
-        readIcons.classList.add('text-emerlad-700')
+    if(text === 'highlight_off'){
+        this.children[0].innerText = 'check_circle'
+        this.classList.add('text-emerald-700', 'border-emerald-900', 'bg-green-300')
+        this.classList.remove('text-red-700', 'border-red-900', 'bg-rose-300')
+    }else if (text === 'check_circle'){
+        this.children[0].innerText = 'highlight_off'
+        this.classList.remove('text-emerald-700', 'border-emerald-900', 'bg-green-300')
+        this.classList.add('text-red-700', 'border-red-900', 'bg-rose-300')
     }
 }
 

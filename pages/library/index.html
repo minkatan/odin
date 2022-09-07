@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="bg-stone-100 text-slate-700 font-mono relative">
+    <div class="container mx-auto flex flex-col pt-24 pb-4 border-b-2 border-rose-100">
+        <div class="flex flex-row justify-between">
+            <h1 class="text-4xl font-bold">Personal Library</h1>
+            <button id="addBook" class="flex flex-row items-center text-center gap-x-2 uppercase bg-red-700 text-amber-100 px-4 py-2 rounded-xl hover:bg-rose-500">
+                    <span class="material-icons md-36">add</span>
+                Add Book
+            </button>
+        </div>
+    </div>
+
+    <!-- render books -->
+    <div id="main" class="grid grid-cols-4 py-12 px-8 gap-x-4 gap-y-8">
+       
+    </div>
+
+    <!-- modal -->
+    <div id="modal" class="hidden absolute inset-0 h-screen w-full bg-opacity-60 bg-slate-900 flex flex-col justify-center items-center">
+        <div class="w-2/5 h-72 bg-red-100 flex flex-col justify-evenly items-start pl-12 gap-4">
+            <div class="grid grid-cols-7">
+                <label for="title" class="col-span-3">Book Title</label>
+                <input type="text" id="title" name="title" class="col-span-4 w-full" />
+            </div>
+            <div class="grid grid-cols-7">
+                <label for="author" class="col-span-3">Author</label>
+                <input type="text" id="author" name="author" class="col-span-4 w-full" />
+            </div>
+            <div class="grid grid-cols-7">
+                <label for="pages" class="col-span-3">Number of Pages</label>
+                <input type="number" id="pages" name="pages" class="col-span-4 w-full" />
+            </div>
+            <div class="grid grid-cols-7">
+                <label for="read" class="col-span-3">Finished Reading Book</label>
+                <input type="checkbox" id="read" name="read" class="col-span-4 w-full" />
+            </div>
+        </div>
+        <div class="flex flex-row gap-x-16 py-4">
+            <button id="saved" type="submit" class="bg-red-700 text-amber-100 px-4 py-2 rounded-xl hover:bg-rose-500">Saved</button>
+            <button id="cancel" class="bg-green-700 text-teal-100 px-4 py-2 rounded-xl hover:bg-emerald-500">Cancel</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

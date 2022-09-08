@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tic Tac Toe</title>
+</head>
+<body class="bg-gray-600">
+    <h1 class="text-8xl font-serif text-center w-full text-white shadow-2xl shadow-cyan-100 p-12">Tic Tac Toe</h1>
+    <div class="container mx-auto h-96 w-96 flex justify-center items-center mt-24 relative">
+        <div id="root" class="bg-cyan-50 p-4 grid grid-cols-3 grid-rows-3 w-full h-full place-items-center cursor-pointer">
+            <div data-grid="0" class="border-r border-b w-full h-full grid place-items-center border-teal-900 text-4xl uppercase font-mono font-semibold"></div>
+            <div data-grid="1" class="border-r border-b w-full h-full grid place-items-center border-teal-900 text-4xl uppercase font-mono font-semibold"></div>
+            <div data-grid="2" class="border-b w-full h-full grid place-items-center border-teal-900 text-4xl uppercase font-mono font-semibold"></div>
+            <div data-grid="3" class="border-r border-b w-full h-full grid place-items-center border-teal-900 text-4xl uppercase font-mono font-semibold"></div>
+            <div data-grid="4" class="border-r border-b w-full h-full grid place-items-center border-teal-900 text-4xl uppercase font-mono font-semibold"></div>
+            <div data-grid="5" class="border-b w-full h-full grid place-items-center border-teal-900 text-4xl uppercase font-mono font-semibold"></div>
+            <div data-grid="6" class="border-r w-full h-full grid place-items-center border-teal-900 text-4xl uppercase font-mono font-semibold"></div>
+            <div data-grid="7" class="border-r w-full h-full grid place-items-center border-teal-900 text-4xl uppercase font-mono font-semibold"></div>
+            <div data-grid="8" class="w-full h-full grid place-items-center border-teal-900 text-4xl uppercase font-mono font-semibold"></div> 
+        </div>
+        <div id="modal" class="hidden absolute h-screen w-screen flex flex-col justify-center items-center bg-cyan-800 text-4xl text-blue-100 font-mono">
+            <span class="py-12">Player1 Won The Game!</span>
+            <button id="restart" class="py-2 px-4 rounded-2xl bg-red-800 text-rose-100">Restart</button>
+        </div>
+    </div>
+    <div>
+        <h2 id="player" class="flex bg-emerald-700 justify-center mt-12 py-4 text-3xl font-mono text-cyan-50">Player 1</h2>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

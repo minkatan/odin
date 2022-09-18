@@ -44,7 +44,6 @@ savedButton.addEventListener('click', addBookToLibrary)
 addBookButton.addEventListener('click',toggleModal)
 
 function render(){
-    const btn = 
 
     main.innerHTML = ''
     myLibrary.forEach((book) => {
@@ -60,7 +59,7 @@ function render(){
 
     const deleteBtns = document.querySelectorAll('.delete')
 
-    deleteBtns.forEach((btn) => btn.addEventListener('click',deleteBook))
+    deleteBtns.forEach((btn) => btn.addEventListener('click',deleteBook(btn)))
     })
 
     const readStatus = document.getElementById('read-status')
@@ -85,9 +84,11 @@ function toggleRead(){
     }
 }
 
-function deleteBook(book){
-    const deleteBook = book.target.parentElement
-    deleteBook.classList.add('hidden')
+function deleteBook(book) {
+    if(book.getAttribute('id') === 'delete') {
+        book.parentElement.parentElement.remove();
+    }
 }
+
 
 render()

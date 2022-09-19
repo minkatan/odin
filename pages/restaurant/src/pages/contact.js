@@ -32,7 +32,7 @@ export default function contact(){
                 <div class="py-4 md:py-8">
                     <h4 class="text-xl font-semibold border-b-2 border-b-gray-800 pb-2 md:pb-0">Social</h4>
                     <div class="flex flex-row gap-x-8 pt-4">
-                    <a href="./"><img src=${fb} alt="facebook" class="h-12 w-12"></a>
+                    <a href="./">${fb}</a>
                     <a href="./"><img src=${insta} alt="instagram" class="h-12 w-12"></a>
                     </div>
                 </div>
